@@ -19,6 +19,7 @@ h1{
     background: rgb(40, 42, 44);
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
     flex-wrap: wrap;
     display: flex;
 }
@@ -53,4 +54,17 @@ div{
 .Flex div{
     flex: 1 1 200px;
     margin: 10px;
+}
+
+.lateral{
+    background: rgba(40, 42, 44, 70%);
+}
+
+/*Footer*/
+footer{
+    margin-top: 15px;
+    background: rgb(40, 42, 44);
+    padding: 15px;
+    color: white;
+    text-align: center;
 }
