@@ -56,6 +56,13 @@ div{
     margin: 10px;
 }
 
+/*Botões*/
+.botao{
+    background: blue;
+    border-radius: 15px;
+    width: 60%;
+    text-align: center;
+}
 /*Footer*/
 footer{
     margin-top: 15px;
