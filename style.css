@@ -62,12 +62,48 @@ div{
     margin: 10px;
 }
 
+
+/*Produtos*/
+#corback{
+    background: rgba(26, 115, 232, 1);
+}
+#produtos{
+    width: 800px;
+}
+.pro{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 800px;/*Largura*/
+    margin: auto;
+    margin-top: 50px;
+}
+
 /*Botões*/
 .botao{
     background: blue;
     border-radius: 15px;
-    width: 60%;
+    width: 120px;
     text-align: center;
+    margin-left: 40px;
+}
+
+#comprar{
+    width: 300px;
+    background: blue;
+}
+/*Formulário*/
+#papelp{
+    background: linear-gradient(rgba(26, 115, 232, 1), #fff);
+    border-radius: 0px;
+    text-align: left;
+}
+#papel{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 800px;/*Largura*/
+    margin: auto;
 }
 /*Footer*/
 footer{

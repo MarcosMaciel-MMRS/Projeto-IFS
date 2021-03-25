@@ -14,23 +14,59 @@
         <nav>
             <ul class="menu">
                 <li><a href="">Sobre</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="">Funcionários</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
             </ul>  
         </nav>
     </header>
-    <h1>Formulário de Compra</h1>
-    <form action="#">
-        <fieldset>
-            <legend>
-                Dados Pessoais
-            </legend>
-            <label for="Nome">Nome:</label>
-            <input type="text" size="30" placeholder="Nome completo">
-            <label for="">RG</label>
-            <input type="number" name="rg" id="rg">
-        </fieldset>
-       
+    <div id="papelp">
+        <h1 id="titulo">Formulário de Compra</h1>
+        <section id="papel">
+            <form action="#">
+                <fieldset>
+                    <legend>Produto</legend>
+                    <label for="qtd">Quantidade:</label>
+                    <input type="range" name="qtd" id="qtd" >
+                    <label for="valor">Valor:</label>
+                    <input type="number" name="valor" id="valor">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>
+                        Dados Pessoais
+                    </legend>
+                    <label for="Nome">Nome:</label>
+                    <input type="text" size="30" placeholder="Nome completo">
+                    <label for="RG">RG:</label>
+                    <input type="number" name="rg" id="rg" maxlength="11">
+                    <label for="cpf">CPF:</label>
+                    <input type="number" name="cpf" id="cpf">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Cartão de Credito</legend>
+                    <label for="numero">Número do cartão:</label>
+                    <input type="number" name="credito" id="credito">
+                    <label for="validade">Validade:</label>
+                    <input type="month" name="validade" id="validade">
+                    <p></p>
+                    <label for="cvv">CVV:</label>
+                    <input type="number" name="cvv" id="cvv" maxlength="3">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Vendedor</legend>
+                    <label for="Vendedor">Nome:</label>
+                    <input type="text" placeholder="Nome completo" required>
+                    <label for="">Departamento</label>
+                    <input type="text" maxlength="3" required>
+                </fieldset>
+            </form>
+        </section>
+        <p><a href="" id="comprar">Comprar</a></p>
+
+    </div>
+    
     </form>
     <footer>
         <p>
