@@ -89,8 +89,17 @@ div{
 }
 
 #comprar{
-    width: 300px;
+    border-radius: 15px;
+    color: white;
+    width: 100px;
     background: blue;
+    
+}
+
+#cancelar{
+    border-radius: 15px;
+    color: black;
+    background: white;
 }
 /*Formulário*/
 #papelp{
