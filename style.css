@@ -78,6 +78,18 @@ div{
     margin: auto;
     margin-top: 50px;
 }
+/*imagens*/
+.imgRedonda{
+    border-radius: 50%;
+    height: 250px;
+    width: 200px;
+}
+
+/*.imgRedonda:hover{ Não funcionou como o esperado XD
+    border-radius: 0%;
+    height: 200px;
+    width: 200px;
+}*/
 
 /*Botões*/
 .botao{
@@ -113,7 +125,9 @@ div{
     padding: 15px;
     width: 800px;/*Largura*/
     margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 60%);
 }
+
 /*Footer*/
 footer{
     margin-top: 15px;
