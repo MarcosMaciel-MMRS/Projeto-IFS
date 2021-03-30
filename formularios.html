@@ -24,6 +24,14 @@
         <section id="papel">
             <form action="#">
                 <fieldset>
+                    <legend>Vendedor</legend>
+                    <label for="Vendedor">Nome:</label>
+                    <input type="type" value="Mark Richard" list="vendedorlist" readonly>
+                    <label for="">Departamento</label>
+                    <input type="type" value="ELT" maxlength="3" required>
+                </fieldset>
+                <br>
+                <fieldset>
                     <legend>Produto</legend>
                     <label for="cd">Código do Produto:</label>
                     <input type="text">
@@ -48,33 +56,64 @@
                 </fieldset>
                 <br>
                 <fieldset>
-                    <legend>Cartão de Credito</legend>
-                    <label for="numero">Número do cartão:</label>
-                    <input type="number" name="credito" id="credito">
-                    <label for="validade">Validade:</label>
-                    <input type="month" name="validade" id="validade">
-                    <p></p>
-                    <label for="cvv">CVV:</label>
-                    <input type="number" name="cvv" id="cvv" maxlength="3">
+                    <legend>Forma de Pagamento</legend>
+                    <h3>Selecione:</h3>
+                    <div class="tab">
+                        <button class="tablinks" onclick="pagamento(event, 'cartao')">Cartão</button>
+                        <button class="tablinks" onclick="pagamento(event, 'Dinheiro')">Dinheiro</button>
+                        <button class="tablinks" onclick="pagamento(event, 'check')">Check</button>
+                      </div>
+                      
+                      <div id="cartao" class="tabcontent">
+                        <h3>Cartão de Crédito</h3>
+                        <label for="numero">Número do cartão:</label>
+                        <input type="number" name="credito" id="credito">
+                        <label for="validade">Validade:</label>
+                        <input type="month" name="validade" id="validade">
+                        <p></p>
+                        <label for="cvv">CVV:</label>
+                        <input type="number" name="cvv" id="cvv" maxlength="3">
+                      </div>
+                      
+                      <div id="Dinheiro" class="tabcontent">
+                        <h3>Receber</h3>
+                        <label for="receber">Total:</label>
+                        <input type="number" name="din" id="din">
+
+                      </div>
+                      
+                      <div id="check" class="tabcontent">
+                        <h3>Não aceitmaos check</h3>
+                        <p>Não receber</p>
+                      </div>
                 </fieldset>
                 <br>
-                <fieldset>
-                    <legend>Vendedor</legend>
-                    <label for="Vendedor">Nome:</label>
-                    <input type="text" placeholder="Nome completo" required>
-                    <label for="">Departamento</label>
-                    <input type="text" maxlength="3" required>
-                </fieldset>
-                <br>
-                <button id="comprar">Comprar</button>
+                <button id="comprar">Confirmar</button>
                 <button id="cancelar">Cancelar</button>
             </form>
         </section>
         <!--<p><a href="" id="comprar">Comprar</a></p>-->
 
     </div>
-    
+    <datalist id="vendedorlist">
+        <option value="vendedor">Mark Richard</option>
+    </datalist>
     </form>
+    <script>
+        function pagamento(evt, page) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(page).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
     <footer>
         <p>
             &copy;<i> Projeto IFS</i>
