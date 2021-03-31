@@ -49,10 +49,10 @@
                     <label for="Nome">Nome:</label>
                     <input type="text" size="20" placeholder="Nome completo">
                     <label for="RG">RG:</label>
-                    <input type="number" name="rg" id="rg" maxlength="11">
+                    <input type="number" name="rg" id="rg" maxlength="11" placeholder="Seu RG">
                     <br>
                     <label for="cpf">CPF:</label>
-                    <input type="number" name="cpf" id="cpf">
+                    <input type="number" name="cpf" id="cpf" placeholder="Seu CPF">
                 </fieldset>
                 <br>
                 <fieldset>
@@ -73,6 +73,8 @@
                         <p></p>
                         <label for="cvv">CVV:</label>
                         <input type="number" name="cvv" id="cvv" maxlength="3">
+                        <label for="parcela">Parcelas</label>
+                        <input type="number" name="parcelas" id="numpar" list="parcelas">
                       </div>
                       
                       <div id="Dinheiro" class="tabcontent">
@@ -96,7 +98,17 @@
 
     </div>
     <datalist id="vendedorlist">
-        <option value="vendedor">Mark Richard</option>
+        <option value="Mark Richard">Mark</option>
+    </datalist>
+    <datalist id="parcelas">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
     </datalist>
     </form>
     <script>
