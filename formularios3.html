@@ -26,26 +26,25 @@
                 <fieldset>
                     <legend>Vendedor</legend>
                     <label for="Vendedor">Nome:</label>
-                    <input type="type" value="Lucas Parker" list="vendedorlist" readonly>
+                    <input type="type" value="Mark Richard" list="vendedorlist" readonly>
                     <label for="">Departamento</label>
-                    <input type="type" value="ESP" maxlength="3" required>
+                    <input type="type" value="ELT" maxlength="3" required>
                 </fieldset>
                 <br>
                 <fieldset>
-                    <legend>produtos</legend>
-                    <input type="checkbox" id="cd1" checked>
-                    <label for="cd1">CHUTEIRA FUTURE Z 1.1 CAMPO</label>
-                    <br>
-                    <input type="checkbox" name="cd2" id="cd2" checked>
-                    <label for="cd2">Chuteira Campo Umbro Medusae III Club - Branco+Laranja</label>
+                    <legend>Produto</legend>
+                    <label for="cd">Código do Produto:</label>
+                    <input type="text">
+                    <label for="qtd">Quantidade:</label>
+                    <input type="number" name="qtd" id="qtd" >
                     <br>
                     <label for="valor">Total:</label>
-                    <input type="text" value="R$1.339,89" readonly>
+                    <input type="number" name="valor" id="valor">
                 </fieldset>
                 <br>
                 <fieldset>
                     <legend>
-                        Cliente - Dados Pessoais 
+                        Dados Pessoais
                     </legend>
                     <label for="Nome">Nome:</label>
                     <input type="text" size="20" placeholder="Nome completo">
@@ -102,13 +101,14 @@
         <option value="Mark Richard">Mark</option>
     </datalist>
     <datalist id="parcelas">
-        <option value="R$669,95">2</option>
-        <option value="R$446,63">3</option>
-        <option value="R$335,00">4</option>
-        <option value="R$268,00">5</option>
-        <option value="R$223,35">6</option>
-        <option value="R$191,50">7</option>
-        <option value="R$167,50">8</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
     </datalist>
     </form>
     <script>
