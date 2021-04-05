@@ -24,70 +24,13 @@
         <section id="papel">
             <form action="#">
                 <fieldset>
-                    <legend>Vendedor</legend>
+                    <legend>Departamento</legend>
                     <label for="Vendedor">Nome:</label>
-                    <input type="type" value="Mark Richard" list="vendedorlist" readonly>
-                    <label for="">Departamento</label>
+                    <input type="text" placeholder="Nome do novo Departamento">
+                    <label for="">Sigla:</label>
                     <input type="type" value="ELT" maxlength="3" required>
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>Produto</legend>
-                    <label for="cd">Código do Produto:</label>
-                    <input type="text">
-                    <label for="qtd">Quantidade:</label>
-                    <input type="number" name="qtd" id="qtd" >
-                    <br>
-                    <label for="valor">Total:</label>
-                    <input type="number" name="valor" id="valor">
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>
-                        Dados Pessoais
-                    </legend>
-                    <label for="Nome">Nome:</label>
-                    <input type="text" size="20" placeholder="Nome completo">
-                    <label for="RG">RG:</label>
-                    <input type="number" name="rg" id="rg" maxlength="11" placeholder="Seu RG">
-                    <br>
-                    <label for="cpf">CPF:</label>
-                    <input type="number" name="cpf" id="cpf" placeholder="Seu CPF">
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>Forma de Pagamento</legend>
-                    <h3>Selecione:</h3>
-                    <div class="tab">
-                        <button class="tablinks" onclick="pagamento(event, 'cartao')">Cartão</button>
-                        <button class="tablinks" onclick="pagamento(event, 'Dinheiro')">Dinheiro</button>
-                        <button class="tablinks" onclick="pagamento(event, 'check')">Check</button>
-                      </div>
-                      
-                      <div id="cartao" class="tabcontent">
-                        <h3>Cartão de Crédito</h3>
-                        <label for="numero">Número do cartão:</label>
-                        <input type="number" name="credito" id="credito">
-                        <label for="validade">Validade:</label>
-                        <input type="month" name="validade" id="validade">
-                        <p></p>
-                        <label for="cvv">CVV:</label>
-                        <input type="number" name="cvv" id="cvv" maxlength="3">
-                        <label for="parcela">Parcelas</label>
-                        <input type="number" name="parcelas" id="numpar" list="parcelas">
-                      </div>
-                      
-                      <div id="Dinheiro" class="tabcontent">
-                        <h3>Receber</h3>
-                        <label for="receber">Total:</label>
-                        <input type="number" name="din" id="din">
-
-                      </div>
-                      
-                      <div id="check" class="tabcontent">
-                        <h3>Não aceitmaos check</h3>
-                        <p>Não receber</p>
-                      </div>
+                    <label for="tipo">Tipo de Produto:</label>
+                    <input type="text" placeholder="Tipo de produto">
                 </fieldset>
                 <br>
                 <button id="comprar">Confirmar</button>

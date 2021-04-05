@@ -62,7 +62,9 @@ div{
     margin: 10px;
 }
 
-
+#Funmes{
+    border-radius: 0px;
+}
 /*Produtos*/
 #corback{
     background: rgba(26, 115, 232, 1);
