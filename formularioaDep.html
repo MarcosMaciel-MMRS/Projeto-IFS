@@ -27,12 +27,19 @@
                     <legend>Departamento</legend>
                     <label for="Vendedor">Nome:</label>
                     <input type="text" placeholder="Nome do novo Departamento">
+                    <br>
                     <label for="">Sigla:</label>
                     <input type="type" value="ELT" maxlength="3" required>
+                    <br>
                     <label for="tipo">Tipo de Produto:</label>
                     <input type="text" placeholder="Tipo de produto">
                 </fieldset>
                 <br>
+                <fieldset>
+                    <legend>Alocação de Funcionário</legend>
+                    <label for="escfun">Escolha um Funcionário:</label>
+                    <input type="text" list="alocfun">
+                </fieldset>
                 <button id="comprar">Confirmar</button>
                 <button id="cancelar">Cancelar</button>
             </form>
@@ -43,15 +50,9 @@
     <datalist id="vendedorlist">
         <option value="Mark Richard">Mark</option>
     </datalist>
-    <datalist id="parcelas">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
+    <datalist id="alocfun">
+        <option value="João Bonaparte, 26 anos">1</option>
+        <option value="Carol Santos, 27 anos">2</option>
     </datalist>
     </form>
     <script>
