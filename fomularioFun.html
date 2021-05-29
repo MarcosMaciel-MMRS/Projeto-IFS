@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Funcionário</title>
+</head>
+<body>
+    <header class="header">
+        <a href="">Logo</a>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="funcionarios.html">Funcionários</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <div id="papelp">
+        <h1 id="titulo">Novo Funcionário</h1>
+        <section id="papel">
+            <form action="#">
+                <h2>Ficha de Admissão</h2>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nomeC">Nome:</label>
+                    <input type="text" placeholder="Nome Completo">
+                    <br>
+                    <br>
+                    <label for="RGF">RG:</label>
+                    <input type="number" name="RGF" id="RGF" placeholder="Seu RG">
+                    <br>
+                    <br>
+                    <label for="CPFF">CPF:</label>
+                    <input type="number" name="CPFF" id="CPFF" placeholder="Seu CPF">
+                    <br>
+                    <br>
+                    <label for="data">Data Admissão:</label>
+                    <input type="date" name="data" id="data">
+                    <br>
+                    <br>
+                    <label for="cidad">Endereço:</label>
+                    <input type="text" name="mora" id="mora" placeholder="Cidade,Estado,Logadouro,Bairro">
+                    <br>
+                    <br>
+                    <label for="esc">Escolaridade:</label>
+                    <input type="text" list="esco" placeholder="Escolha uma Opção">
+                    <br>
+                    <br>
+                    <label for="mãe">Nome da Mãe</label>
+                    <input type="text" placeholder="Nome Completo">
+                </fieldset>
+                <fieldset>
+                    <legend>Função</legend>
+                    <label for="car">Cargo:</label>
+                    <input type="text" list="prof" placeholder="Escolha Uma opção">
+                    <br>
+                    <br>
+                    <label for="dep">Departamentos Disponíveis:</label>
+                    <input type="text" name="depar" id="depar" list="depart" placeholder="Escolha uma Opção">
+                </fieldset>
+                <br>
+                <button id="comprar">Confirmar</button>
+                <button id="cancelar">Cancelar</button>
+            </form>
+        </section>
+        <!--<p><a href="" id="comprar">Comprar</a></p>-->
+    </div>
+    <datalist id="vendedorlist">
+        <option value="Mark Richard">Mark</option>
+    </datalist>
+    <datalist id="esco">
+        <option value="Médio">Médio</option>
+        <option value="Técnico">Técnico</option>
+        <option value="Superior">Superior</option>
+        <option value="outra opção">Outra Opção</option>
+    </datalist>
+    <datalist id="prof">
+        <option value="Vendedor">vendedor</option>
+        <option value="Analista">Analista</option>
+        <option value="Chefe de Departamento">Superior</option>
+        <option value="outra opção">Outra Opção</option>
+    </datalist>
+    <datalist id="depart">
+        <option value="Esportes">Esportes</option>
+        <option value="Eletrônica">Eletrônica</option>
+        <option value="Gastronomia">Gastronomia</option>
+        <option value="outra opção">Outra Opção</option>
+    </datalist>
+    </form>
+    <script>
+        function pagamento(evt, page) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(page).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
+    <footer>
+        <p>
+            &copy;<i> Projeto IFS</i>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Departamento</title>
+</head>
+<body>
+    <header class="header">
+        <a href="">Logo</a>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="funcionarios.html">Funcionários</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <div id="papelp">
+        <h1 id="titulo">Novo Departamento</h1>
+        <section id="papel">
+            <form action="#">
+                <fieldset>
+                    <legend>Departamento</legend>
+                    <label for="Vendedor">Nome:</label>
+                    <input type="text" placeholder="Nome do novo Departamento">
+                    <br>
+                    <label for="">Sigla:</label>
+                    <input type="type" value="ELT" maxlength="3" required>
+                    <br>
+                    <label for="tipo">Tipo de Produto:</label>
+                    <input type="text" placeholder="Tipo de produto">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Alocação de Funcionário</legend>
+                    <label for="escfun">Escolha um Funcionário:</label>
+                    <input type="text" list="alocfun">
+                </fieldset>
+                <button id="comprar">Confirmar</button>
+                <button id="cancelar">Cancelar</button>
+            </form>
+        </section>
+        <!--<p><a href="" id="comprar">Comprar</a></p>-->
+
+    </div>
+    <datalist id="vendedorlist">
+        <option value="Mark Richard">Mark</option>
+    </datalist>
+    <datalist id="alocfun">
+        <option value="João Bonaparte, 26 anos">1</option>
+        <option value="Carol Santos, 27 anos">2</option>
+    </datalist>
+    </form>
+    <script>
+        function pagamento(evt, page) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(page).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
+    <footer>
+        <p>
+            &copy;<i> Projeto IFS</i>
+        </p>
+    </footer>
+</body>
+</html>

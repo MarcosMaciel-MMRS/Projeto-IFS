@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Compra</title>
+</head>
+<body>
+    <header class="header">
+        <a href="">Logo</a>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="funcionarios.html">Funcionários</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <div id="papelp">
+        <h1 id="titulo">Formulário de Compra</h1>
+        <section id="papel">
+            <form action="#">
+                <fieldset>
+                    <legend>Vendedor</legend>
+                    <label for="Vendedor">Nome:</label>
+                    <input type="type" value="Mark Richard" list="vendedorlist" readonly>
+                    <label for="">Departamento</label>
+                    <input type="type" value="ELT" maxlength="3" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Produto</legend>
+                    <label for="cd">Código do Produto:</label>
+                    <input type="text">
+                    <label for="qtd">Quantidade:</label>
+                    <input type="number" name="qtd" id="qtd" >
+                    <br>
+                    <label for="valor">Total:</label>
+                    <input type="number" name="valor" id="valor">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>
+                        Dados Pessoais
+                    </legend>
+                    <label for="Nome">Nome:</label>
+                    <input type="text" size="20" placeholder="Nome completo">
+                    <label for="RG">RG:</label>
+                    <input type="number" name="rg" id="rg" maxlength="11" placeholder="Seu RG">
+                    <br>
+                    <label for="cpf">CPF:</label>
+                    <input type="number" name="cpf" id="cpf" placeholder="Seu CPF">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Forma de Pagamento</legend>
+                    <h3>Selecione:</h3>
+                    <div class="tab">
+                        <button class="tablinks" onclick="pagamento(event, 'cartao')">Cartão</button>
+                        <button class="tablinks" onclick="pagamento(event, 'Dinheiro')">Dinheiro</button>
+                        <button class="tablinks" onclick="pagamento(event, 'check')">Check</button>
+                      </div>
+                      
+                      <div id="cartao" class="tabcontent">
+                        <h3>Cartão de Crédito</h3>
+                        <label for="numero">Número do cartão:</label>
+                        <input type="number" name="credito" id="credito">
+                        <label for="validade">Validade:</label>
+                        <input type="month" name="validade" id="validade">
+                        <p></p>
+                        <label for="cvv">CVV:</label>
+                        <input type="number" name="cvv" id="cvv" maxlength="3">
+                        <label for="parcela">Parcelas</label>
+                        <input type="number" name="parcelas" id="numpar" list="parcelas">
+                      </div>
+                      
+                      <div id="Dinheiro" class="tabcontent">
+                        <h3>Receber</h3>
+                        <label for="receber">Total:</label>
+                        <input type="number" name="din" id="din">
+
+                      </div>
+                      
+                      <div id="check" class="tabcontent">
+                        <h3>Não aceitmaos check</h3>
+                        <p>Não receber</p>
+                      </div>
+                </fieldset>
+                <br>
+                <button id="comprar">Confirmar</button>
+                <button id="cancelar">Cancelar</button>
+            </form>
+        </section>
+        <!--<p><a href="" id="comprar">Comprar</a></p>-->
+
+    </div>
+    <datalist id="vendedorlist">
+        <option value="Mark Richard">Mark</option>
+    </datalist>
+    <datalist id="parcelas">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </datalist>
+    </form>
+    <script>
+        function pagamento(evt, page) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(page).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
+    <footer>
+        <p>
+            &copy;<i> Projeto IFS</i>
+        </p>
+    </footer>
+</body>
+</html>
