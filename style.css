@@ -180,3 +180,12 @@ footer{
     color: white;
     text-align: center;
 }
+
+.newcolor{
+    background: white;
+}
+
+.spacerow1{
+    display: flex;
+    justify-content: space-around;
+}
